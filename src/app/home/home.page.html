@@ -1,0 +1,174 @@
+<ion-content [fullscreen]="true">
+    <ion-grid>
+        <ion-row class="ion-padding">
+            <ion-col>
+                <div class="ion-text-start">
+                    <span>Hello, Maria!</span><br>
+                    <strong>Stay Fit & Healthy</strong>
+                </div>
+            </ion-col>
+            <ion-col>
+                <div class="ion-text-end notification">
+                    <ion-icon name="notifications-outline">
+                    </ion-icon>
+                    <ion-badge color="light">.</ion-badge>
+                </div>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <ion-item-divider color="light">
+        <ion-label>
+            Trending Workouts &nbsp;
+            <img src="../../assets/images/fire.jpeg" height="20" />
+        </ion-label>
+    </ion-item-divider>
+    <ion-card>
+        <ion-card-header>
+            <ion-grid>
+                <ion-row>
+                    <ion-col size="3">
+                        <ion-button color="medium" size="small">Beginner</ion-button>
+                    </ion-col>
+                    <ion-col size="1"></ion-col>
+                    <ion-col size="3">
+                        <ion-button color="medium" size="small">Full Body</ion-button>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-card-header>
+
+        <ion-card-content>
+            <h3 class="ion-padding">Push Your Limit</h3>
+            <ion-grid>
+                <ion-row>
+                    <ion-col size="4" class="ion-text-start">
+                        <ion-icon name="flame-outline"></ion-icon> &nbsp; 360kcal
+                    </ion-col>
+                    <ion-col size="4">
+                        <ion-icon name="time-outline"></ion-icon> &nbsp; 1h 25min
+                    </ion-col>
+                    <ion-col size="3" class="ion-text-end star-val">
+                        <ion-icon name="star-outline" color="warning"></ion-icon> &nbsp; 4.8
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+
+        </ion-card-content>
+    </ion-card>
+    <ion-item-divider color="light">
+        <ion-label>
+            Workouts types&nbsp;
+        </ion-label>
+    </ion-item-divider>
+    <ion-slides [options]="slideOpts">
+        <ion-slide>
+            <img src="../../assets/images/fitness.jpg" alt="slide-1">
+            <div class="centered">
+                <ion-row>
+                    <ion-col class="ion-text-left">
+                        Hiit
+                    </ion-col>
+                    <ion-col class="ion-text-right">
+                        12 Session
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-slide>
+        <ion-slide>
+            <img src="../../assets/images/fitness.jpg" alt="slide-2">
+            <div class="centered">
+                <ion-row>
+                    <ion-col class="ion-text-left">
+                        Amrap
+                    </ion-col>
+                    <ion-col class="ion-text-right">
+                        15 Session
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-slide>
+        <ion-slide>
+            <img src="../../assets/images/fitness.jpg" alt="slide-3">
+            <div class="centered">
+                <ion-row>
+                    <ion-col class="ion-text-left">
+                        Hiit
+                    </ion-col>
+                    <ion-col class="ion-text-right">
+                        12 Session
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-slide>
+    </ion-slides>
+
+    <ion-item-divider color="light">
+        <ion-label>
+            Additional training&nbsp;
+        </ion-label>
+    </ion-item-divider>
+    <ion-item lines="none">
+        <ion-thumbnail slot="start">
+            <img src="../../assets/images/user-fitness.jpg">
+        </ion-thumbnail>
+        <ion-label>
+            <strong> Deep Amrap Barner</strong>
+            <p>
+                <ion-row>
+                    <ion-col size="4" class="ion-text-start">
+                        <ion-icon name="flame" color="primary"></ion-icon> &nbsp; 360kcal
+                    </ion-col>
+                    <ion-col size="4">
+                        <ion-icon name="time" color="primary"></ion-icon> &nbsp; 1h 25min
+                    </ion-col>
+                </ion-row>
+            </p>
+            <p>
+                Beginner - Full body
+            </p>
+        </ion-label>
+    </ion-item>
+    <ion-item lines="none">
+        <ion-thumbnail slot="start">
+            <img src="../../assets/images/user-fitness.jpg">
+        </ion-thumbnail>
+        <ion-label>
+            <strong> Deep Butt Sculp</strong>
+            <p>
+                <ion-row>
+                    <ion-col size="4" class="ion-text-start">
+                        <ion-icon name="flame" color="primary"></ion-icon> &nbsp; 360kcal
+                    </ion-col>
+                    <ion-col size="4">
+                        <ion-icon name="time" color="primary"></ion-icon> &nbsp; 1h 25min
+                    </ion-col>
+                </ion-row>
+            </p>
+            <p>
+                Beginner - Full body
+            </p>
+        </ion-label>
+    </ion-item>
+    <ion-item lines="none">
+        <ion-thumbnail slot="start">
+            <img src="../../assets/images/user-fitness.jpg">
+        </ion-thumbnail>
+        <ion-label>
+            <strong> Start, Button Item</strong>
+            <p>
+                <ion-row>
+                    <ion-col size="4" class="ion-text-start">
+                        <ion-icon name="flame" color="primary"></ion-icon> &nbsp; 360kcal
+                    </ion-col>
+                    <ion-col size="4">
+                        <ion-icon name="time" color="primary"></ion-icon> &nbsp; 1h 25min
+                    </ion-col>
+                </ion-row>
+            </p>
+            <p>
+                Beginner - Full body
+            </p>
+        </ion-label>
+    </ion-item>
+
+</ion-content>

@@ -1,0 +1,22 @@
+<ion-app>
+    <ion-split-pane contentId="main-content">
+        <ion-menu contentId="main-content" type="overlay" side="end">
+            <ion-content>
+                <ion-list id="inbox-list">
+                    <ion-list-header>Devices</ion-list-header>
+                    <ion-menu-toggle auto-hide="false" *ngFor="let device of devices; let i = index">
+                        <ion-item lines="none" (click)="devicePosition(device)">
+                            <ion-label>{{ device.name }}</ion-label>
+                        </ion-item>
+                    </ion-menu-toggle>
+                    <ion-menu-toggle auto-hide="false">
+                        <ion-item lines="none" (click)="logout()">
+                            <ion-button>Logout</ion-button>
+                        </ion-item>
+                    </ion-menu-toggle>
+                </ion-list>
+            </ion-content>
+        </ion-menu>
+        <ion-router-outlet id="main-content"></ion-router-outlet>
+    </ion-split-pane>
+</ion-app>
