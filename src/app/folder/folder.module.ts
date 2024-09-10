@@ -7,12 +7,14 @@ import { IonicModule } from '@ionic/angular';
 import { FolderPageRoutingModule } from './folder-routing.module';
 
 import { FolderPage } from './folder.page';
+import { TabsPageModule } from '../tabs/tabs.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
+    TabsPageModule,
     FolderPageRoutingModule
   ],
   declarations: [FolderPage]

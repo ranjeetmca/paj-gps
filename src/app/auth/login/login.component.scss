@@ -1,0 +1,28 @@
+.login-form {
+  form {
+    width: 100%;
+    padding: 52% 5%;
+    height: 100vh;
+    background: linear-gradient(45deg, pink, lightblue);
+  }
+  .paj-logo {
+    background: #000;
+    text-align: center;
+  }
+
+}
+#root {
+  padding: 10px;
+}
+.invalid {
+  // border: 1px solid red;
+  padding-left: 10px;
+}
+ion-item {
+  --background: transparent;
+}
+ion-text {
+  p {
+  padding-left: 12px;
+}
+}

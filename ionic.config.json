@@ -1,5 +1,7 @@
 {
-  "name": "PajTask",
-  "integrations": {},
+  "name": "motorbazaar",
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

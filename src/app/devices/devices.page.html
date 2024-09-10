@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar class="dark ion-padding-vertical">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button> <!-- Menu button -->
+    </ion-buttons>
+     <ion-title><img src="../../assets/images/logo-website-paj-header.svg"></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let device of deviceList" (click)="goToDevice(device.id)">
+      <ion-avatar slot="start">
+        <img src="{{ device.customImgUrl }}" alt="{{ device.name }}">
+      </ion-avatar>
+
+      <ion-label>
+        <h2>{{ device.name }}</h2>
+        <p>Model: {{ device.device_models[0].model }}</p>
+        <p>Status: <span [ngClass]="device.status">{{ device.status }}</span></p>
+      </ion-label>
+
+      <!-- Status indicator -->
+      <!-- <ion-badge slot="end" color="{{ getStatusColor(device.status) }}">
+        {{ device.status }}
+      </ion-badge> -->
+    </ion-item>
+  </ion-list>
+</ion-content>

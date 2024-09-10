@@ -1,18 +1,28 @@
 import { Component } from '@angular/core';
+import { AuthenticationService } from './services/authentication.service';
+import { DevicesService } from './services/devices.service';
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
+  public selectedIndex = 0;
+  Users: any;
   public appPages = [
-    { title: 'Inbox', url: '/folder/inbox', icon: 'mail' },
-    { title: 'Outbox', url: '/folder/outbox', icon: 'paper-plane' },
-    { title: 'Favorites', url: '/folder/favorites', icon: 'heart' },
-    { title: 'Archived', url: '/folder/archived', icon: 'archive' },
-    { title: 'Trash', url: '/folder/trash', icon: 'trash' },
-    { title: 'Spam', url: '/folder/spam', icon: 'warning' },
+    { title: 'All Devices', url: '/tabs/devices', icon: 'map' },
   ];
-  public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
-  constructor() {}
+  constructor(private authService: AuthenticationService
+    ) {
+    const storedUser = localStorage.getItem('user');
+    this.Users = storedUser ? JSON.parse(storedUser) : null;
+    console.log(this.Users)
+  }
+  async logout() {
+    this.authService.logout();
+  }
+  ngOnInit() {
+
+  }
+
 }
