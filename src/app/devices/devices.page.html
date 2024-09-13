@@ -1,13 +1,21 @@
 <ion-header>
   <ion-toolbar class="dark ion-padding-vertical">
     <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button> <!-- Menu button -->
+      <ion-menu-button></ion-menu-button>
     </ion-buttons>
      <ion-title><img src="../../assets/images/logo-website-paj-header.svg"></ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content
+      pullingIcon="arrow-down"
+      pullingText="Pull to refresh"
+      refreshingSpinner="circles"
+      refreshingText="Refreshing...">
+    </ion-refresher-content>
+  </ion-refresher>
   <ion-list>
     <ion-item *ngFor="let device of deviceList" (click)="goToDevice(device.id)">
       <ion-avatar slot="start">
@@ -19,11 +27,6 @@
         <p>Model: {{ device.device_models[0].model }}</p>
         <p>Status: <span [ngClass]="device.status">{{ device.status }}</span></p>
       </ion-label>
-
-      <!-- Status indicator -->
-      <!-- <ion-badge slot="end" color="{{ getStatusColor(device.status) }}">
-        {{ device.status }}
-      </ion-badge> -->
     </ion-item>
   </ion-list>
 </ion-content>

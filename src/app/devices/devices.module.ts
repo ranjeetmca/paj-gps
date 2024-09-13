@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { DevicesPageRoutingModule } from './devices-routing.module';
-
 import { DevicesPage } from './devices.page';
+import { DeviceTrackingComponent } from './device-tracking/device-tracking.component';
+import { DevicesPageRoutingModule } from './devices-routing.module';
 
 @NgModule({
   imports: [
@@ -15,6 +15,6 @@ import { DevicesPage } from './devices.page';
     IonicModule,
     DevicesPageRoutingModule
   ],
-  declarations: [DevicesPage]
+  declarations: [DevicesPage, DeviceTrackingComponent],
 })
 export class DevicesPageModule {}

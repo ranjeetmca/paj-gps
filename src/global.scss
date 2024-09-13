@@ -25,6 +25,9 @@
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
 
+
+@import "../src/theme/variables.scss";
+
 /**
  * Ionic Dark Mode
  * -----------------------------------------------------
@@ -34,7 +37,23 @@
 
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
-@import "@ionic/angular/css/palettes/dark.system.css";
 ion-toolbar {
   --background: #000 !important;
+}
+.maplibregl-map {
+  position: static !important;
+}
+ion-header ion-toolbar:first-of-type {
+  padding-top: 16px;
+}
+/* Make sure there's no CSS that hides the spinner */
+ion-loading {
+  --spinner-color: var(--ion-color-primary);
+  --spinner-size: large; /* You can adjust this */
+}
+ion-loading {
+  z-index: 9999;  /* Make sure it's on top of everything */
+}
+ion-item {
+  --color: #000;
 }

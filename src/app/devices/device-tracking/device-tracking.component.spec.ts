@@ -1,12 +1,12 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { DeviceTrackingPage } from './device-tracking.page';
+import { DeviceTrackingComponent } from './device-tracking.component';
 
 describe('DeviceTrackingPage', () => {
-  let component: DeviceTrackingPage;
-  let fixture: ComponentFixture<DeviceTrackingPage>;
+  let component: DeviceTrackingComponent;
+  let fixture: ComponentFixture<DeviceTrackingComponent>;
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DeviceTrackingPage);
+    fixture = TestBed.createComponent(DeviceTrackingComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

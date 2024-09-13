@@ -6,13 +6,13 @@ const routes: Routes = [
   {
     path: '',
     component: LoginComponent,
-    children: [
-      {
-        path: 'login',
-        loadChildren: () =>
-          import('../auth/login/auth.module').then((m) => m.AuthModule),
-      },
-    ],
+    // children: [
+    //   {
+    //     path: 'login',
+    //     loadChildren: () =>
+    //       import('../auth/login/auth.module').then((m) => m.AuthModule),
+    //   },
+    // ],
   },
   {
     path: '',

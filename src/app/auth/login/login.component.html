@@ -1,6 +1,6 @@
 <div class="login-form">
   <div class="paj-logo">
-    <img src="../../../../assets/images/logo-website-paj-header.svg" />
+    <img src="../../../../assets/images/logo-website-paj-header.svg" alt="logo"/>
   </div>
   <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
     <ion-item>
@@ -18,21 +18,21 @@
         }"
       ></ion-input>
     </ion-item>
-      <ion-text
-        color="danger"
-        *ngIf="
-          loginForm.controls['email'].invalid &&
-          (loginForm.controls['email'].dirty ||
-            loginForm.controls['email'].touched)
-        "
-      >
-        <p *ngIf="loginForm.controls['email'].errors?.['required']">
-          Email is required.
-        </p>
-        <p *ngIf="loginForm.controls['email'].errors?.['email']">
-          Enter a valid email address.
-        </p>
-      </ion-text>
+    <ion-text
+      color="danger"
+      *ngIf="
+        loginForm.controls['email'].invalid &&
+        (loginForm.controls['email'].dirty ||
+          loginForm.controls['email'].touched)
+      "
+    >
+      <p *ngIf="loginForm.controls['email'].errors?.['required']">
+        Email is required.
+      </p>
+      <p *ngIf="loginForm.controls['email'].errors?.['email']">
+        Enter a valid email address.
+      </p>
+    </ion-text>
 
     <ion-item>
       <ion-input

@@ -1,35 +1,40 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { TabsPageModule } from './tabs/tabs.module';
-import { AuthGuard } from './guards/auth.guard';
-
+import { AuthGuard } from './core/guards/auth.guard';
+import { DeviceTrackingComponent } from './devices/device-tracking/device-tracking.component';
 
 const routes: Routes = [
-
   {
     path: '',
-    loadChildren: () => import('./auth/login/auth.module').then(m => m.AuthModule)
+    loadChildren: () =>
+      import('./auth/login/auth.module').then((m) => m.AuthModule),
   },
-  // {
-  //   path: '',
-  //   redirectTo: 'tabs',
-  //   pathMatch: 'full'
-  // },
   {
-    path: 'tabs',
+    path: 'login',
+    loadChildren: () =>
+      import('./auth/login/auth.module').then((m) => m.AuthModule),
+  },
+  {
+    path: 'devices',
     canActivate: [AuthGuard],
-    loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
+    loadChildren: () =>
+      import('./devices/devices.module').then((m) => m.DevicesPageModule),
   },
   {
     path: 'device-tracking',
-    loadChildren: () => import('./device-tracking/device-tracking.module').then( m => m.DeviceTrackingPageModule)
-  }
+    component: DeviceTrackingComponent,
+  },
+  {
+    path: '',
+    redirectTo: 'devices',
+    pathMatch: 'full',
+  },
 ];
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
+    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules }),
   ],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule {}
