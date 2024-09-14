@@ -1,12 +1,13 @@
 <div class="login-form">
   <div class="paj-logo">
-    <img src="../../../../assets/images/logo-website-paj-header.svg" alt="logo" height="60"/>
+    <img src="../../../../assets/images/logo-website-paj-header.svg" alt="logo"/>
   </div>
   <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-    <ion-item border="none">
+    <ion-item>
       <ion-input
         label="Email"
         label-placement="floating"
+        fill="outline"
         placeholder="Enter email"
         formControlName="email"
         [ngClass]="{
@@ -32,13 +33,14 @@
         Enter a valid email address.
       </p>
     </ion-text>
-  <br>
-    <ion-item border="none">
+
+    <ion-item>
       <ion-input
         type="password"
         formControlName="password"
         label="Password"
         label-placement="floating"
+        fill="outline"
         placeholder="Enter password"
         [ngClass]="{
           invalid:
@@ -62,7 +64,7 @@
       </p>
     </ion-text>
 
-    <ion-button class="ion-margin-top ion-text-center" expand="block" type="submit" [disabled]="loginForm.invalid"
+    <ion-button expand="block" type="submit" [disabled]="loginForm.invalid"
       >Login</ion-button
     >
   </form>

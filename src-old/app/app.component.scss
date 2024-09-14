@@ -1,0 +1,27 @@
+
+ ion-note {
+  margin-top: 20px;
+}
+ion-list-header {
+  background: #000;
+}
+ion-menu {
+  --background: #f4f4f4;
+}
+
+ion-toolbar {
+  --background: #3880ff;
+  --color: white;
+}
+
+ion-list ion-item {
+  --background-hover: #d9e4ff;
+}
+
+ion-icon {
+  --color: #3880ff;
+}
+ion-item {
+  --padding-top: 16px;
+  border-bottom: 1px solid #ddd;
+}

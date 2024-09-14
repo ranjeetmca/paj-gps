@@ -53,7 +53,7 @@ export class LoginComponent implements OnInit {
         .login(this.loginForm.value.email, encodedPassword)
         .subscribe({
           // Navigate to home page after successful login
-          next: () => location.assign('/devices'),
+          next: () => this.router.navigate(['/devices']),
           error: (err) =>
             this.alertService.showErrorAlert('Login failed', err.error.error),
         });

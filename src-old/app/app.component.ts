@@ -43,11 +43,7 @@ export class AppComponent {
   }
 
   ngOnInit() {
-      this.getDevice();
-  }
-  ionViewDidEnter() {
-
-
+    this.getDevice();
   }
   initializeApp() {
     this.platform.ready().then(async () => {
@@ -66,7 +62,6 @@ export class AppComponent {
     });
   }
   async getDevice() {
-    console.log('okk')
     this.loadingService.showLoading();
     await this.deviceService.getDevices().subscribe({
       next: (res) => (this.deviceList = res.success),
