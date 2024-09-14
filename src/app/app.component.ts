@@ -44,6 +44,13 @@ export class AppComponent {
 
   ngOnInit() {
       this.getDevice();
+<<<<<<< HEAD
+=======
+  }
+  ionViewDidEnter() {
+
+
+>>>>>>> 90cccf7e7aacaca81a636f6467588f26e9d2c6ee
   }
   
   ionViewDidEnter() {}
