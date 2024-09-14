@@ -1,4 +1,4 @@
-# My Ionic 8 Cordova App
+# GPS Device Tracking Ionic 8 Cordova App
 
 ## Overview
 This is a mobile application built using [Ionic Framework](https://ionicframework.com/) version 8 and Apache Cordova. It supports both Android and iOS platforms and utilizes various Cordova plugins for native functionality.
