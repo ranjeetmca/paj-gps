@@ -43,8 +43,11 @@ export class AppComponent {
   }
 
   ngOnInit() {
-    this.getDevice();
+      this.getDevice();
   }
+  
+  ionViewDidEnter() {}
+  
   initializeApp() {
     this.platform.ready().then(async () => {
       this.splashScreen.hide();
@@ -62,6 +65,7 @@ export class AppComponent {
     });
   }
   async getDevice() {
+    console.log('okk')
     this.loadingService.showLoading();
     await this.deviceService.getDevices().subscribe({
       next: (res) => (this.deviceList = res.success),
